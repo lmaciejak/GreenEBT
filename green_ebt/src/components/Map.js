@@ -58,6 +58,7 @@ class Map extends React.Component {
     const image =
       zoom >= 16 ? appleImage : zoom >= 14 ? appleImage : appleImage;
 
+
     console.log("this.state.markets", this.state.markets);
     // console.log('this.state.markets[0].location_points', this.state.markets[0].location_points.coordinates)
 

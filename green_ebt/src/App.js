@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 // import logo from './logo.svg';
 import './App.css';
-import Map from "./components/Map";
-import MarketInfo from "./components/MarketInfo";
+import Map from './components/Map.js'
+
 
 class App extends Component {
   state = {
@@ -17,8 +17,8 @@ class App extends Component {
     return (
       <div className="App">
         <div id="map-container">
-          <Map onMarketClick={this.onMarketClick} />
-        </div>
+        <Map onMarketClick={this.onMarketClick} />
+      </div>
       </div>
     );
   }
