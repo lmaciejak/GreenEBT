@@ -60,13 +60,13 @@ class SelectBorough extends React.Component {
       return (
         <div>
           <li>
-            Name:{market.market_name}
-            Location: {market.location}
-            Operation Season:{market.operation_season}
-            Hours: {market.operation_hours}
-            Website: {market.market_link}
-            Accepts EBT:{market.snap_status}
-            Phone Number:{market.phone}
+            <p> Name: {market.market_name} </p>
+            <p> Location: {market.location} </p>
+            <p>Operation Season: {market.operation_season} </p>
+            <p>Hours: {market.operation_hours} </p>
+            <p><a href={market.market_link}>{market.market_link}</a></p>
+            <p>Accepts EBT: {market.snap_status} </p>
+            <p>Phone Number: {market.phone} </p>
           </li>
         </div>
       );
@@ -74,7 +74,7 @@ class SelectBorough extends React.Component {
   };
 
   render() {
-    const { markets, boroughs, selectedBorough, county } = this.state;
+    const { markets, boroughs, selectedBorough } = this.state;
     console.log(this.state);
     return (
       <div>
