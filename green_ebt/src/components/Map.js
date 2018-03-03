@@ -1,7 +1,8 @@
 import React from "react";
 import GoogleMapReact from "google-map-react";
 import axios from "axios";
-import appleimage from "./images/apple.png"
+import appleImage from "../images/images"
+import MarketMarker from "./MarketMaker"
 
 
 const defaultOptions = {
@@ -53,7 +54,7 @@ class Map extends React.Component {
     const { markets, mapOptions, selectedMarketID } = this.state;
     const { zoom } = mapOptions;
 
-    const image = zoom >= 16 ? appleImageM : zoom >= 14 ? appleImageS : appleImageXS;
+    const image = zoom >= 16 ? appleImage : zoom >= 14 ? appleImage : appleImage;
 
     console.log('this.state.markets', this.state.markets)
     // console.log('this.state.markets[0].location_points', this.state.markets[0].location_points.coordinates)
