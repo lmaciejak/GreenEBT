@@ -3,7 +3,8 @@ import About from "./components/About";
 import SelectBorough from "./components/SelectBorough";
 import React, { Component } from 'react';
 import './App.css';
-import Map from './components/Map.js'
+import Map from './components/Map.js';
+import MarketInfo from "./components/MarketInfo.js";
 
 class App extends Component {
   state = {
@@ -15,11 +16,10 @@ class App extends Component {
   };
 
   render() {
+    const { selectedMarket } = this.state;
+    console.log("selected: ", selectedMarket);
     return (
       <div className="App">
-        <div id="map-container">
-        <Map onMarketClick={this.onMarketClick} />
-        </div>
         <nav>
           <Link to="/">Map</Link>
           <Link to="/about">About Us</Link>
@@ -28,8 +28,19 @@ class App extends Component {
           <Route exact path="/" component={SelectBorough} />
           <Route path="/about" component={About} />
         </Switch>
+
+      <div id="map-container">
+          <Map onMarketClick={this.onMarketClick} />
+        </div>
+        <div id="market-info">
+          {selectedMarket ? (
+            MarketInfo(selectedMarket)
+          ) : (
+            <strong> Choose a farmers' market </strong>
+          )}
+        </div>
       </div>
-    );
+);
   }
 }
 
