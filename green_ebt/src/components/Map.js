@@ -1,8 +1,8 @@
 import React from "react";
 import GoogleMapReact from "google-map-react";
 import axios from "axios";
-import appleimage from "./images/apple.png"
-
+import appleImage from "../images/images";
+import MarketMarker from "./MarketMaker";
 
 const defaultOptions = {
   defaultCenter: { lat: 40.7128, lng: -73.9 },
@@ -28,9 +28,11 @@ class Map extends React.Component {
         "https://data.ny.gov/resource/7jkw-gj56.json?county='Queens'  OR county='Kings' OR county='New York' OR county='Richmond' OR county='Bronx'"
       )
       .then(res => {
-        console.log('res.data', res.data)
+        console.log("res.data", res.data);
         this.setState({
-          markets: res.data.filter(market => market.location && market.location_points.coordinates)
+          markets: res.data.filter(
+            market => market.location && market.location_points.coordinates
+          )
         });
       })
       .catch(err => {
@@ -53,9 +55,10 @@ class Map extends React.Component {
     const { markets, mapOptions, selectedMarketID } = this.state;
     const { zoom } = mapOptions;
 
-    const image = zoom >= 16 ? appleImageM : zoom >= 14 ? appleImageS : appleImageXS;
+    const image =
+      zoom >= 16 ? appleImage : zoom >= 14 ? appleImage : appleImage;
 
-    console.log('this.state.markets', this.state.markets)
+    console.log("this.state.markets", this.state.markets);
     // console.log('this.state.markets[0].location_points', this.state.markets[0].location_points.coordinates)
 
     return (
