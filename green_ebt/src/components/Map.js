@@ -1,6 +1,9 @@
 import React from "react";
 import GoogleMapReact from "google-map-react";
 import axios from "axios";
+
+import "../MarketMarker.css";
+
 import MarketMarkerGreen from "./MarketMakerGreen";
 import MarketMarkerRed from "./MarketMakerRed";
 
@@ -10,6 +13,7 @@ import appleImageL from "../images/green_apple_large.png";
 import appleImageredS from "../images/red_apple_small.png";
 import appleImageredM from "../images/red_apple_medium.png";
 import appleImageredL from "../images/red_apple_large.png";
+
 
 const defaultOptions = {
   defaultCenter: { lat: 40.7128, lng: -73.9 },
