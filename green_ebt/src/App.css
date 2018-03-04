@@ -32,7 +32,10 @@ ul {
   width: 45%;
   padding: 5px;
   margin: 5px;
-  margin-left: 50%; 
+  /* margin-left: 50%;  */
+  float: right;
+  /* position: absolute; */
+ 
 }
 
 .App-title {
@@ -103,12 +106,15 @@ ul {
   
   @media all and (max-width: 700px) and (min-width: 0px) {
   .burger label { display: block; height: 70px; width: 70px; line-height: 70px; text-align: center; color: #fff; font-size: 1.8rem; background: #000; cursor: pointer; }
-  #menu-toggle { display: block; }
   
-  .burger .nav { display: none; }
   .burger li { width: 100%; }
-  #menu-toggle:checked  .nav { display: block; }
+   .nav { display: block; }
   /* .burger :active .nav { display: none;  } */
   }
 
 
+.borough{
+  color: rgb(0, 68, 255);
+  position: absolute;
+  
+}
