@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import "../App.css";
 import SlideShow from './SlideShow';
 
+
 class AboutPage extends React.Component {
   constructor(props) {
     super(props)
