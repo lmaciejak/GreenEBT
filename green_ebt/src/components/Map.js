@@ -76,7 +76,7 @@ console.log('imgred', imageRed)
     console.log("this.state.markets", this.state.markets);
     // console.log('this.state.markets[0].location_points', this.state.markets[0].location_points.coordinates)
 
-    return (
+    return (    
       <GoogleMapReact
         bootstrapURLKeys={{
           key: "AIzaSyCQTUR2rqPrkIsOIBh7G_KjKE74P4kcKX0"
@@ -104,7 +104,7 @@ console.log('imgred', imageRed)
           lng={market.location_points.coordinates[0]}
         /> 
         ))}
-      </GoogleMapReact>
+      </GoogleMapReact>    
     );
   }
 }
