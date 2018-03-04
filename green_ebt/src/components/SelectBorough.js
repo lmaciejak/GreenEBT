@@ -39,26 +39,8 @@ class SelectBorough extends React.Component {
     };
   }
 
-  handleSelect = e => {
-    this.setState({
-      selectedBorough: e.target.value
-    });
-    console.log(this.state.selectedBorough);
-    console.log("e.target.value", e.target.value);
-    axios
-      .get(
-        `https://data.ny.gov/resource/7jkw-gj56.json?county=${e.target.value}&$order=market_name ASC`
-      )
-      .then(res => {
-        console.log("response", res);
-        this.setState({
-          markets: res.data
-        });
-      });
-  };
-
   getMarketDetail = () => {
-    return this.state.markets.map(market => {
+    return this.props.markets.map(market => {
       return (
         <div>
           <li>
@@ -93,14 +75,13 @@ class SelectBorough extends React.Component {
   }
 
   render() {
-    const { markets, boroughs, selectedBorough } = this.state;
     
     return (
       <div>
         <div className='borough'>
         
-        <select value={selectedBorough} onChange={this.handleSelect}>
-          {boroughs.map((borough, index) => (
+        <select value={this.props.selectedBorough} onChange={this.props.handleSelect}>
+          {this.state.boroughs.map((borough, index) => (
             <option
               disabled={index === 0}
               selected={index === 0}
