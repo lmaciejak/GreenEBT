@@ -1,12 +1,19 @@
 import React from "react";
 import GoogleMapReact from "google-map-react";
 import axios from "axios";
-import appleImage from "../images/red-apple.png";
-import MarketMarker from "./MarketMaker";
+import MarketMarkerGreen from "./MarketMakerGreen";
+import MarketMarkerRed from "./MarketMakerRed";
+
+import appleImageS from "../images/green_apple_small.png";
+import appleImageM from "../images/green_apple_medium.png";
+import appleImageL from "../images/green_apple_large.png";
+import appleImageredS from "../images/red_apple_small.png";
+import appleImageredM from "../images/red_apple_medium.png";
+import appleImageredL from "../images/red_apple_large.png";
 
 const defaultOptions = {
   defaultCenter: { lat: 40.7128, lng: -73.9 },
-  defaultZoom: 12
+  defaultZoom: 11
 };
 
 class Map extends React.Component {
@@ -17,8 +24,6 @@ class Map extends React.Component {
   };
 
   shouldComponentUpdate(nextProps, nextState) {
-    // Since this component does not depend on props, we only rerender when state changes
-    // So we avoid unneeded renders when parent (App) component rerenders
     return this.state !== nextState;
   }
 
@@ -55,8 +60,13 @@ class Map extends React.Component {
     const { markets, mapOptions, selectedMarketID } = this.state;
     const { zoom } = mapOptions;
 
-    const image =
-      zoom >= 16 ? appleImage : zoom >= 14 ? appleImage : appleImage;
+    const imageGreen =
+      zoom >= 16 ? appleImageL : zoom >= 14 ? appleImageM : appleImageS;
+console.log('imggreen', imageGreen)
+
+const imageRed = 
+zoom >= 16 ? appleImageredL : zoom >= 14 ? appleImageredM: appleImageredS;
+console.log('imgred', imageRed)
 
 
     console.log("this.state.markets", this.state.markets);
@@ -71,16 +81,24 @@ class Map extends React.Component {
         {...defaultOptions}
         {...mapOptions}
       >
-        {markets.map(market => (
-          <MarketMarker
+        {markets.map(market => ( market.snap_status === "Y" ? 
+          <MarketMarkerGreen
             market={market}
-            image={image}
+            imageGreen={imageGreen}
             selected={market.unique_key === selectedMarketID}
             onMarketClick={() => this.onMarketClick(market)}
             key={market.unique_key}
             lat={market.location_points.coordinates[1]}
             lng={market.location_points.coordinates[0]}
-          />
+          /> :           <MarketMarkerRed
+          market={market}
+          imageRed={imageRed}
+          selected={market.unique_key === selectedMarketID}
+          onMarketClick={() => this.onMarketClick(market)}
+          key={market.unique_key}
+          lat={market.location_points.coordinates[1]}
+          lng={market.location_points.coordinates[0]}
+        /> 
         ))}
       </GoogleMapReact>
     );

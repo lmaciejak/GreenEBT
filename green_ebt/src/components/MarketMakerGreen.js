@@ -1,13 +1,13 @@
 import React from "react";
 
-const MarketMarker = ({ market, image, onMarketClick, selected }) => (
+const MarketMarkerGreen = ({ market, imageGreen, onMarketClick, selected }) => (
   <img
     className={selected ? "market selected" : "market"}
     alt=""
-    src={image}
+    src={imageGreen}
     
     onMouseDown={() => onMarketClick(market)}
   />
 );
 
-export default MarketMarker;
+export default MarketMarkerGreen;
