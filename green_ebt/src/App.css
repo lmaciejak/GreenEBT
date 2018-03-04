@@ -15,10 +15,11 @@
 }
 
 #map-container {
-  height: 400px;
-  width: 50%;
+  height: 640px;
+  width: 45%;
   padding: 5px;
   margin: 5px;
+  margin-left: 50%; 
 }
 
 .App-title {
