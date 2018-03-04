@@ -24,7 +24,7 @@ class MapAndBoro extends React.Component {
           {this.state.selectedMarket ? (
             MarketInfo(this.state.selectedMarket)
           ) : (
-            <strong> Choose a farmers' market </strong>
+            <strong className="About-header"> Choose a farmers' market </strong>
           )}
         </div>
       </div>

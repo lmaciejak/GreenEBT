@@ -1,15 +1,17 @@
 import React from 'react';
-// import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom';
+import "../App.css";
+
 
 class AboutPage extends React.Component {
     render() {
       return (
         <div className="about-us">
-          <h1>About GreenEBT</h1>
+          <h1 className="About-header">About GreenEBT</h1>
           <p>Founded in March 2018, GreenEBT seeks to connect EBT recipients with farmers markets 
             accepting EBT.</p>
 
-          <h1>The Team</h1>
+          <h1 className="About-header">The Team</h1>
           <ul>
             <li>Ivan Mendoza</li>
             <li>Princess Guerrero</li>
@@ -18,7 +20,7 @@ class AboutPage extends React.Component {
             <li>Omari Rose</li>
           </ul>
 
-          <h2>Contact us</h2>
+          <h2 className="About-header">Contact us</h2>
           <form action="submit">
             <input type="email" name="" id=""/>
             <input type="button" value=""/>
