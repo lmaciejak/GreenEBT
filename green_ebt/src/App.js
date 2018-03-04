@@ -69,6 +69,7 @@ class App extends Component {
       } 
 
     console.log("targetVal", targetVal);
+    console.log('hello')
     axios
       .get(
         `https://data.ny.gov/resource/7jkw-gj56.json?county=${e.target.value}&$order=market_name ASC`
