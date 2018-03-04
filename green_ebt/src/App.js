@@ -4,7 +4,7 @@ import SelectBorough from "./components/SelectBorough";
 import React, { Component } from "react";
 import "./App.css";
 import Map from "./components/Map.js";
-import MarketInfo from "./components/MarketInfo.js";
+// import MarketInfo from "./components/MarketInfo.js";
 import MapAndBoro from "./components/MapAndBoro.js";
 
 class App extends Component {
