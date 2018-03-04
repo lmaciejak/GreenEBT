@@ -8,14 +8,30 @@ import Map from "./components/Map.js";
 import MapAndBoro from "./components/MapAndBoro.js";
 import Title from "./components/Title";
 
+import Css from "./App.css"
+
 class App extends Component {
   render() {
     return (
       <div>
-        <nav>
-          <Link to="/">Map</Link> {"  "}
-          <Link to="/about">About Us</Link>
-        </nav>
+        
+        <div className='burger'>
+        <label id="menu-toggle"> ☰ </label>
+        <input type="checkbox" id="menu-toggle" />
+  
+          <ul className='nav'>
+          <li className='logo' >GreenEBT</li>
+          <div className='two'>
+          <li className='li'><Link id='link' to="/">Map</Link></li> 
+          {"  "}
+          <li className='li'><Link id='link' to="/about">About Us</Link></li>
+          </div>
+          </ul>
+        </div>
+
+    
+
+
         <Switch>
           <Route exact path="/" component={MapAndBoro} />
           <Route path="/about" component={About} />
