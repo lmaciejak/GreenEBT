@@ -33,6 +33,7 @@ class Map extends React.Component {
     return this.state !== nextState;
   }
 
+
   componentDidMount() {
     axios
       .get(
@@ -58,14 +59,22 @@ class Map extends React.Component {
   };
 
   onMarketClick = i => {
+    const markets = this.state.markets;
     this.props.onMarketClick(i);
-    this.setState({ selectedMarketIndex: i });
+    this.setState({
+      selectedMarketIndex: i,
+      mapOptions: {center: {
+        lat: markets[i].location_points.coordinates[1],
+        lng: markets[i].location_points.coordinates[0]
+      },
+    zoom: 6}
+    });
   };
 
   render() {
     const { markets, mapOptions, selectedMarketIndex } = this.state;
     const { zoom } = mapOptions;
-
+console.log(mapOptions)
     const imageGreen =
       zoom >= 16 ? appleImageL : zoom >= 14 ? appleImageM : appleImageS;
 console.log('imggreen', imageGreen)
@@ -78,7 +87,7 @@ console.log('imgred', imageRed)
     console.log("this.state.markets", this.state.markets);
     // console.log('this.state.markets[0].location_points', this.state.markets[0].location_points.coordinates)
 
-    return <GoogleMapReact bootstrapURLKeys={{ key: "AIzaSyCQTUR2rqPrkIsOIBh7G_KjKE74P4kcKX0" }} onChange={this.onMapChange} {...defaultOptions} {...mapOptions}>
+    return <GoogleMapReact id="map-container" bootstrapURLKeys={{ key: "AIzaSyCQTUR2rqPrkIsOIBh7G_KjKE74P4kcKX0" }}  {...mapOptions}>
         {markets.map((market, i) => (market.snap_status === "Y" ? <div lat={market.location_points.coordinates[1]} lng={market.location_points.coordinates[0]} style={{ width: 30, heigth: 30 }}>
                 <MarketMarkerGreen market={market} imageGreen={imageGreen} selected={market[i] === selectedMarketIndex} onMarketClick={() => this.onMarketClick(i)} key={i} lat={market.location_points.coordinates[1]} lng={market.location_points.coordinates[0]} />
                 {i === selectedMarketIndex && <div id="market-info">

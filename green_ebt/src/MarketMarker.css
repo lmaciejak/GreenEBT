@@ -2,3 +2,18 @@
     cursor: pointer;
     transform: scale(1.25);
 }
+#market-info {
+    /* position: absolute; */
+    left: 1px;
+    top: 1px;
+    text-align: center;
+    border-radius: 2px;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid grey;
+    width: 231px;
+    height: 150px;
+    z-index: 99;
+}
+#map-container {
+    z-index: -99;
+}
