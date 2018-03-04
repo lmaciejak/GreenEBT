@@ -2,6 +2,8 @@ import React from "react";
 // import { Link, Switch, Route } from "react-router-dom";
 import axios from "axios";
 
+import App from '../App.css'
+
 class SelectBorough extends React.Component {
   constructor() {
     super();
@@ -95,6 +97,7 @@ class SelectBorough extends React.Component {
     console.log(this.state);
     return (
       <div>
+        <div className='borough'>
         <select value={selectedBorough} onChange={this.handleSelect}>
           {boroughs.map((borough, index) => (
             <option
@@ -107,6 +110,7 @@ class SelectBorough extends React.Component {
           ))}
         </select>
         <div>{this.getMarketDetail()}</div>
+        </div>
       </div>
     );
   }
