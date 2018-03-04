@@ -16,6 +16,17 @@
   color: white;
 }
 
+ul {
+  list-style-type: none;
+  margin: 0 auto 6px 5px;
+
+}
+
+.Photos {
+  width: 30%;
+  height: 30%;
+}
+
 #map-container {
   height: 640px;
   width: 45%;
