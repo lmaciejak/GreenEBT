@@ -3,7 +3,8 @@
     transform: scale(1.25);
 }
 #market-info {
-    /* position: absolute; */
+    position: absolute;
+    padding: 2px;
     left: 1px;
     top: 1px;
     text-align: center;
@@ -11,9 +12,10 @@
     background-color: rgb(255, 255, 255);
     border: 1px solid grey;
     width: 231px;
-    height: 150px;
+    height: 165px;
     z-index: 99;
+    word-wrap: break-word;
 }
-#map-container {
-    z-index: -99;
+#market-marker {
+    z-index: -1;
 }
