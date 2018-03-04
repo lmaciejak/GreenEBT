@@ -6,6 +6,7 @@ import "./App.css";
 import Map from "./components/Map.js";
 import MarketInfo from "./components/MarketInfo.js";
 import MapAndBoro from "./components/MapAndBoro.js";
+import Title from "./components/Title";
 
 class App extends Component {
   render() {
@@ -19,6 +20,7 @@ class App extends Component {
           <Route exact path="/" component={MapAndBoro} />
           <Route path="/about" component={About} />
         </Switch>
+        <Title />
       </div>
     );
   }
