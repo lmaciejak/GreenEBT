@@ -7,6 +7,8 @@ import "../MarketMarker.css";
 import MarketMarkerGreen from "./MarketMakerGreen";
 import MarketMarkerRed from "./MarketMakerRed";
 
+import MarketInfo from "./MarketInfo";
+
 import appleImageS from "../images/green_apple_small.png";
 import appleImageM from "../images/green_apple_medium.png";
 import appleImageL from "../images/green_apple_large.png";
@@ -24,7 +26,7 @@ class Map extends React.Component {
   state = {
     mapOptions: defaultOptions,
     markets: [],
-    selectedMarketID: null
+    selectedMarketIndex: null
   };
 
   shouldComponentUpdate(nextProps, nextState) {
@@ -55,13 +57,13 @@ class Map extends React.Component {
     });
   };
 
-  onMarketClick = market => {
-    this.props.onMarketClick(market);
-    this.setState({ selectedMarketID: market.unique_key });
+  onMarketClick = i => {
+    this.props.onMarketClick(i);
+    this.setState({ selectedMarketIndex: i });
   };
 
   render() {
-    const { markets, mapOptions, selectedMarketID } = this.state;
+    const { markets, mapOptions, selectedMarketIndex } = this.state;
     const { zoom } = mapOptions;
 
     const imageGreen =
@@ -76,36 +78,20 @@ console.log('imgred', imageRed)
     console.log("this.state.markets", this.state.markets);
     // console.log('this.state.markets[0].location_points', this.state.markets[0].location_points.coordinates)
 
-    return (    
-      <GoogleMapReact
-        bootstrapURLKeys={{
-          key: "AIzaSyCQTUR2rqPrkIsOIBh7G_KjKE74P4kcKX0"
-        }}
-        onChange={this.onMapChange}
-        {...defaultOptions}
-        {...mapOptions}
-      >
-        {markets.map(market => ( market.snap_status === "Y" ? 
-          <MarketMarkerGreen
-            market={market}
-            imageGreen={imageGreen}
-            selected={market.unique_key === selectedMarketID}
-            onMarketClick={() => this.onMarketClick(market)}
-            key={market.unique_key}
-            lat={market.location_points.coordinates[1]}
-            lng={market.location_points.coordinates[0]}
-          /> :           <MarketMarkerRed
-          market={market}
-          imageRed={imageRed}
-          selected={market.unique_key === selectedMarketID}
-          onMarketClick={() => this.onMarketClick(market)}
-          key={market.unique_key}
-          lat={market.location_points.coordinates[1]}
-          lng={market.location_points.coordinates[0]}
-        /> 
-        ))}
-      </GoogleMapReact>    
-    );
+    return <GoogleMapReact bootstrapURLKeys={{ key: "AIzaSyCQTUR2rqPrkIsOIBh7G_KjKE74P4kcKX0" }} onChange={this.onMapChange} {...defaultOptions} {...mapOptions}>
+        {markets.map((market, i) => (market.snap_status === "Y" ? <div lat={market.location_points.coordinates[1]} lng={market.location_points.coordinates[0]} style={{ width: 30, heigth: 30 }}>
+                <MarketMarkerGreen market={market} imageGreen={imageGreen} selected={market[i] === selectedMarketIndex} onMarketClick={() => this.onMarketClick(i)} key={i} lat={market.location_points.coordinates[1]} lng={market.location_points.coordinates[0]} />
+                {i === selectedMarketIndex && <div id="market-info">
+                    {MarketInfo(markets[selectedMarketIndex])}
+                  </div>}
+              </div> : <div lat={market.location_points.coordinates[1]} lng={market.location_points.coordinates[0]} style={{ width: 30, heigth: 30 }}>
+                {" "}
+                <MarketMarkerRed market={market} imageRed={imageRed} selected={market[i] === selectedMarketIndex} onMarketClick={() => this.onMarketClick(i)} key={market.unique_key} lat={market.location_points.coordinates[1]} lng={market.location_points.coordinates[0]} />
+                {i === selectedMarketIndex && <div id="market-info">
+                    {MarketInfo(markets[selectedMarketIndex])}
+                  </div>}
+              </div>))}
+      </GoogleMapReact>;
   }
 }
 
