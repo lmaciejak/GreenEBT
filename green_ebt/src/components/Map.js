@@ -1,7 +1,7 @@
 import React from "react";
 import GoogleMapReact from "google-map-react";
 import axios from "axios";
-import appleImage from "../images/red-apple.png";
+import appleImage from "../images/red_apple_large.png";
 import MarketMarker from "./MarketMaker";
 
 const defaultOptions = {

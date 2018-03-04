@@ -1,4 +1,5 @@
 import React from "react";
+import "../MarketMarker.css";
 
 const MarketMarker = ({ market, image, onMarketClick, selected }) => (
   <img
