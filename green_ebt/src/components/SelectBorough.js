@@ -45,7 +45,7 @@ class SelectBorough extends React.Component {
     console.log("e.target.value", e.target.value);
     axios
       .get(
-        `https://data.ny.gov/resource/7jkw-gj56.json?county=${e.target.value}`
+        `https://data.ny.gov/resource/7jkw-gj56.json?county=${e.target.value}&$order=market_name ASC`
       )
       .then(res => {
         console.log("response", res);
