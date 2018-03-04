@@ -2,7 +2,6 @@ import React from "react";
 // import { Link, Switch, Route } from "react-router-dom";
 import axios from "axios";
 import App from '../App.css'
-const Table = require('react-bootstrap/lib/Table')
 
 
 class SelectBorough extends React.Component {
@@ -95,7 +94,7 @@ class SelectBorough extends React.Component {
 
   render() {
     const { markets, boroughs, selectedBorough } = this.state;
-    const rows = this.st
+    
     return (
       <div>
         <div className='borough'>
@@ -111,9 +110,6 @@ class SelectBorough extends React.Component {
             </option>
           ))}
         </select>
-        <Table responsive>
-          { rows }
-        </Table>
         <div>{this.getMarketDetail()}</div>
         </div>
       </div>
