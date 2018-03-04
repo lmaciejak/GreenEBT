@@ -1,8 +1,9 @@
 import React from "react";
 // import { Link, Switch, Route } from "react-router-dom";
 import axios from "axios";
-
 import App from '../App.css'
+const Table = require('react-bootstrap/lib/Table')
+
 
 class SelectBorough extends React.Component {
   constructor() {
@@ -94,10 +95,11 @@ class SelectBorough extends React.Component {
 
   render() {
     const { markets, boroughs, selectedBorough } = this.state;
-    console.log(this.state);
+    const rows = this.st
     return (
       <div>
         <div className='borough'>
+        
         <select value={selectedBorough} onChange={this.handleSelect}>
           {boroughs.map((borough, index) => (
             <option
@@ -109,6 +111,9 @@ class SelectBorough extends React.Component {
             </option>
           ))}
         </select>
+        <Table responsive>
+          { rows }
+        </Table>
         <div>{this.getMarketDetail()}</div>
         </div>
       </div>
