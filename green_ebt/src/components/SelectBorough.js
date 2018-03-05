@@ -3,6 +3,7 @@ import React from "react";
 import axios from "axios";
 import '../App.css'
 import Select, {Option, OptGroup} from 'rc-select';
+import marketImg from "../images/market.jpg"
 
 
 class SelectBorough extends React.Component {
@@ -68,7 +69,7 @@ class SelectBorough extends React.Component {
         <div className='borough'>
         <div className='staticTitle'>
         <h2>Welcome to GreenEBT</h2>
-        <img className="imgMarket" src="https://cdn.pixabay.com/photo/2016/07/28/08/58/market-1547290_1280.jpg" />
+        <img className="imgMarket" src={marketImg} />
         <p>Please Select a Borough</p>
         
         <div class="select-style">
