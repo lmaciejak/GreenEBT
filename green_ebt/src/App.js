@@ -9,11 +9,8 @@ import Map from "./components/Map.js";
 import MapAndBoro from "./components/MapAndBoro.js";
 import Title from "./components/Title";
 
-<<<<<<< HEAD
 import Copyright from './components/Copyright';
-import Css from "./App.css"
-=======
->>>>>>> 273848345756c224a32f1daaa2fe18e6d747603b
+import "./App.css"
 
 class App extends Component {
 
