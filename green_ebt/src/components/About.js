@@ -20,17 +20,18 @@ class AboutPage extends React.Component {
 
           <h2 className="About-header">The Team</h2>
           <ul>
-            <li>Ivan Mendoza</li>
-            <li>Princess Guerrero</li>
-            <li>Le'Shanda Miller</li>
-            <li>Luiza Maciejak</li>
-            <li>Omari Rose</li>
+            <li>Ivan Mendoza - Tech Lead</li>
+            <li>Omari Rose - Demo Lead</li>
+            <li>Le'Shanda Miller - Project Lead</li>
+            <li>Princess Guerrero - Scrum Master</li>
+            <li>Luiza Maciejak - Design Lead</li>
           </ul>
 
-        
+        <div className="gallery">
           <SlideShow />
+        </div>
           
-
+          
           <h2 className="About-header">Contact us</h2>
             <p>Email: contact@greenebt.com <br />
                Phone: 212-345-5678 <br />
