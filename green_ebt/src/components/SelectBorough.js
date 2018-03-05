@@ -1,7 +1,7 @@
 import React from "react";
 // import { Link, Switch, Route } from "react-router-dom";
 import axios from "axios";
-import App from '../App.css'
+import '../App.css'
 
 
 class SelectBorough extends React.Component {

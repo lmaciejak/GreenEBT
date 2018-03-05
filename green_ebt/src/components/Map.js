@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 import GoogleMapReact from "google-map-react";
 import axios from "axios";
 
@@ -22,7 +22,7 @@ const defaultOptions = {
   defaultZoom: 11
 };
 
-class Map extends React.Component {
+class Map extends Component {
   state = {
     mapOptions: defaultOptions,
     markets: [],
