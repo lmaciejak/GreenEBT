@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Economica');
+
+body{
+  background-color: #D8DDEF;
+  color: #494B54;
+}
 .App {
   text-align: center;
 }
@@ -14,12 +20,38 @@
   color: white;
 }
 
+ul {
+  list-style-type: none;
+  margin: 0 auto 6px 5px;
+
+}
+
+.about-us {
+  margin: 15px;
+}
+
+.footer-bp {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.Photos {
+  width: 30%;
+  height: 30%;
+}
+
 #map-container {
-  height: 640px;
-  width: 45%;
+  height: 750px;
+  width: 73%;
   padding: 5px;
   margin: 5px;
-  margin-left: 50%; 
+  /* margin-left: 50%;  */
+  float: right;
+  /* position: absolute; */
+ 
 }
 
 .App-title {
@@ -30,7 +62,103 @@
   font-size: large;
 }
 
+.About-header {
+  font-family: 'Economica', sans-serif;
+}
+
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+
+/* .nav-list {
+  list-style-type: none;
+  margin: 0px;
+  padding: 0;
+  overflow: hidden;
+  background-color: black;
+  font-family: 'Trade Winds', cursive;
+  
+}
+
+.li {
+  float: right;
+  display: block;
+  padding: 20px;
+  border-right: 1px solid #bbb;
+  font-family: 'Trade Winds', cursive;
+}
+#link{
+  color: white;
+  
+}
+.li:hover{
+  background-color: rgb(177, 132, 74);
+}
+/* .logo{
+  float: left;
+  color: white;
+} */
+
+.logo{
+  float: left;
+  color: white;
+  padding: 15px;
+  list-style: none; 
+  width: 10%;
+  height: 10%;
+}
+#logo-size{
+  
+}
+
+
+ 
+  
+  .burger { display: block; list-style-type: none; background: black; }
+  .burger ul { text-align: center; }
+  .li {  display: inline-block; width: 15%; list-style: none; background: #000; color: #fff; }
+  /* .two{float:right} */
+  .burger li a {  display: block; padding: 15px; text-decoration: none; color: #fff; transition: 0.8s; }
+  .burger li a:hover { background: #1CAC83; color: #fff; }
+  
+  .burger label { display: none; }
+  #menu-toggle { display: none; }
+  
+  @media all and (max-width: 700px) and (min-width: 0px) {
+  .burger label { display: block; height: 70px; width: 70px; line-height: 70px; text-align: center; color: #fff; font-size: 1.8rem; background: #000; cursor: pointer; }
+  
+  .burger li { width: 100%; }
+   .nav { display: block; }
+  /* .burger :active .nav { display: none;  } */
+  }
+
+
+.borough{
+  color: #494B54;
+  position: absolute;
+  margin-left: 20px;
+  padding-top: 20px;
+  word-wrap: break-word;
+list-style: none;
+  
+  width: 25%;
+  height: 80%;
+  overflow: auto;
+  
+  border: 10px red;
+  
+}
+
+hr.borderbottom{
+  border-top: 1px solid #494B54
+}
+
+h1{
+  text-align: center;
+  font-size: 30px;
+}
+
+#about-text{
+  text-align: center;
 }

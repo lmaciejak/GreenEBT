@@ -5,9 +5,12 @@ import SelectBorough from "./SelectBorough";
 import MarketInfo from "./MarketInfo.js";
 
 class MapAndBoro extends React.Component {
-  state = {
-    selectedMarket: null
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      selectedMarket: null
+    }
+  }
 
   onMarketClick = market => {
     this.setState({ selectedMarket: market });
@@ -16,11 +19,9 @@ class MapAndBoro extends React.Component {
   render() {
     return (
       <div>
-        <div>
-          <SelectBorough />
-        </div>
+        <SelectBorough handleSelect={this.props.handleSelect} mapOptions={this.props.mapOptions} markets={this.props.markets} />
         <div id="map-container">
-          <Map onMarketClick={this.onMarketClick} />
+          <Map onMarketClick={this.onMarketClick} markets={this.props.markets} mapOptions={this.props.mapOptions} />
         </div>
       </div>
     );
