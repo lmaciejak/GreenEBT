@@ -74,6 +74,22 @@ ul {
 .About-header {
   font-family: "Economica", sans-serif;
 }
+#legend {
+  position: sticky;
+  width: 60px;
+  font-family: Arial, sans-serif;
+  background: #fff;
+  padding: 5px;
+  margin: 5px;
+  border: 2px solid #000;
+  z-index: 150;
+}
+#legend h3 {
+  margin-top: 0;
+}
+#legend img {
+  vertical-align: middle;
+}
 
 @keyframes App-logo-spin {
   from {
@@ -124,23 +140,6 @@ ul {
    .nav { display: block; }
   /* .burger :active .nav { display: none;  } */
   .logo-div {width: 100%;  }
-
-#legend {
-  position: sticky;
-  width: 60px;
-  font-family: Arial, sans-serif;
-  background: #fff;
-  padding: 5px;
-  margin: 5px;
-  border: 2px solid #000;
-  z-index: 150;
-}
-#legend h3 {
-  margin-top: 0;
-}
-#legend img {
-  vertical-align: middle;
-}
 
 .burger {
   display: block;
