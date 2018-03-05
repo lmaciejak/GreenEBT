@@ -5,6 +5,14 @@ import "../App.css";
 import SlideShow from './SlideShow';
 import Copyright from './Copyright';
 
+import { SocialIcons } from 'react-social-icons';
+
+
+let urls = [
+  'http://twitter.com/',
+  'http://www.facebook.com',
+  'http://www.instagram.com'
+];
 
 class AboutPage extends React.Component {
   constructor(props) {
@@ -37,7 +45,8 @@ class AboutPage extends React.Component {
                Phone: 212-345-5678 <br />
                Address: 494 Broadway 36th fl. New York, NY 10003
             </p>
-
+            
+            <SocialIcons urls={urls} color="#7293a0" />
             <Copyright />
         </div>
       );
