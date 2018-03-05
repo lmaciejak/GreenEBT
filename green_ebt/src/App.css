@@ -28,6 +28,16 @@ ul {
 
 .about-us {
   margin: 15px;
+  align-content: center;
+  text-align: center;
+  text-justify: inter-word;
+}
+
+.gallery {
+  align-content: center;
+  margin: 0 auto;
+  margin-left: 45%;
+  width: 250px;
 }
 
 .footer-bp {
@@ -39,8 +49,8 @@ ul {
 }
 
 .Photos {
-  width: 30%;
-  height: 30%;
+  width: 50%;
+  height: 50%;
 }
 
 #map-container {
