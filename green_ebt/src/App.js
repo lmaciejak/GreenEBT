@@ -86,7 +86,7 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <div >
         
         <div className='burger'>
         <input type="checkbox" id="menu-toggle" />

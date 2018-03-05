@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css?family=Economica');
+@import url("https://fonts.googleapis.com/css?family=Economica");
 
-body{
-  background-color: #D8DDEF;
-  color: #494B54;
+body {
+  background-color: #d8ddef;
+  color: #494b54;
 }
 .App {
   text-align: center;
@@ -23,7 +23,6 @@ body{
 ul {
   list-style-type: none;
   margin: 0 auto 6px 5px;
-
 }
 
 .about-us {
@@ -51,7 +50,6 @@ ul {
   /* margin-left: 50%;  */
   float: right;
   /* position: absolute; */
- 
 }
 
 .App-title {
@@ -63,12 +61,16 @@ ul {
 }
 
 .About-header {
-  font-family: 'Economica', sans-serif;
+  font-family: "Economica", sans-serif;
 }
 
 @keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 /* .nav-list {
@@ -100,65 +102,125 @@ ul {
   color: white;
 } */
 
-.logo{
+.logo {
   float: left;
   color: white;
   padding: 15px;
-  list-style: none; 
+  list-style: none;
   width: 10%;
   height: 10%;
 }
-#logo-size{
-  
+#logo-size {
 }
 
+.burger {
+  display: block;
+  list-style-type: none;
+  background: black;
+}
+.burger ul {
+  text-align: center;
+}
+.li {
+  display: inline-block;
+  width: 15%;
+  list-style: none;
+  background: #000;
+  color: #fff;
+}
+/* .two{float:right} */
+.burger li a {
+  display: block;
+  padding: 15px;
+  text-decoration: none;
+  color: #fff;
+  transition: 0.8s;
+}
+.burger li a:hover {
+  background: #1cac83;
+  color: #fff;
+}
 
- 
-  
-  .burger { display: block; list-style-type: none; background: black; }
-  .burger ul { text-align: center; }
-  .li {  display: inline-block; width: 15%; list-style: none; background: #000; color: #fff; }
-  /* .two{float:right} */
-  .burger li a {  display: block; padding: 15px; text-decoration: none; color: #fff; transition: 0.8s; }
-  .burger li a:hover { background: #1CAC83; color: #fff; }
-  
-  .burger label { display: none; }
-  #menu-toggle { display: none; }
-  
-  @media all and (max-width: 700px) and (min-width: 0px) {
-  .burger label { display: block; height: 70px; width: 70px; line-height: 70px; text-align: center; color: #fff; font-size: 1.8rem; background: #000; cursor: pointer; }
-  
-  .burger li { width: 100%; }
-   .nav { display: block; }
-  /* .burger :active .nav { display: none;  } */
+.burger label {
+  display: none;
+}
+#menu-toggle {
+  display: none;
+}
+
+@media all and (max-width: 700px) and (min-width: 0px) {
+  .burger label {
+    display: block;
+    height: 70px;
+    width: 70px;
+    line-height: 70px;
+    text-align: center;
+    color: #fff;
+    font-size: 1.8rem;
+    background: #000;
+    cursor: pointer;
   }
 
+  .burger li {
+    width: 100%;
+  }
+  .nav {
+    display: block;
+  }
+  /* .burger :active .nav { display: none;  } */
+}
 
-.borough{
-  color: #494B54;
+.borough {
+  color: #494b54;
   position: absolute;
   margin-left: 20px;
   padding-top: 20px;
   word-wrap: break-word;
-list-style: none;
-  
+  list-style: none;
+
   width: 25%;
   height: 80%;
   overflow: auto;
-  
+
   border: 10px red;
-  
 }
 
-hr.borderbottom{
-  border-top: 1px solid #494B54
+.marketdetail {
+  padding-top: 25%;
 }
 
-h1{
+hr.borderbottom {
+  border-top: 1px solid #494b54;
+}
+
+h1 {
   text-align: center;
   font-size: 30px;
 }
 
-#about-text{
+#about-text {
   text-align: center;
+}
+
+@media only screen and (max-width: 500px) {
+  #map-container {
+    width: 100%;
+    height: 300px;
+    padding: 1px;
+    margin: 1px;
+  }
+  #market-info {
+    width: 100%;
+  }
+  #menu-toggle {
+    font-size: 3em;
+  }
+  #market-info {
+    float: right;
+    font-size: 1.2em;
+  }
+  .borough {
+    margin-top: 72%;
+    width: 100%;
+  }
 }

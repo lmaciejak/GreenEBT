@@ -43,7 +43,7 @@ class SelectBorough extends React.Component {
     return this.props.markets.map(market => {
       return (
 
-        <div >
+        <div className='gridbox'>
           <li className='borderbottom'>
             <p> Name: {market.market_name} </p>
             <p> Location: {market.location} </p>
@@ -64,7 +64,7 @@ class SelectBorough extends React.Component {
     return (
       <div>
         <div className='borough'>
-        
+        <div className='fixedposition'>
         <select value={this.props.selectedBorough} onChange={this.props.handleSelect}>
           {this.state.boroughs.map((borough, index) => (
             <option
@@ -77,7 +77,8 @@ class SelectBorough extends React.Component {
             </option>
           ))}
         </select>
-        <div>{this.getMarketDetail()}</div>
+        </div>
+        <div id="marketdetail">{this.getMarketDetail()}</div>
         <h2>Welcome to GreenEBT</h2>
         <p>Please Select a Borough</p>
         </div>
