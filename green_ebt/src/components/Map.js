@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 import GoogleMapReact from "google-map-react";
 import axios from "axios";
 
@@ -16,8 +16,7 @@ import appleImageredS from "../images/red_apple_small.png";
 import appleImageredM from "../images/red_apple_medium.png";
 import appleImageredL from "../images/red_apple_large.png";
 
-
-class Map extends React.Component {
+class Map extends Component {
   constructor(props) {
     super(props);
     this.state = {
