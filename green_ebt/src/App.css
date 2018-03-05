@@ -55,7 +55,7 @@ ul {
 }
 
 #map-container {
-  height: 750px;
+  height: 880px;
   width: 68%;
   padding: 5px;
   margin: 5px;
@@ -168,6 +168,7 @@ ul {
   }
   .nav {
     display: block;
+    /* z-index: 10;  */
   }
   /* .burger :active .nav { display: none;  } */
 }
@@ -178,24 +179,24 @@ ul {
   padding-top: 20px;
   word-wrap: break-word;
   list-style: none;
-  width: 25%;
-  height: 80%;
+  width: 30%;
+  height: 90%;
   overflow: auto;
-  border: 10px red;
+  /* border: 10px red; */
 }
 
 .marketdetail {
   padding-top: 25%;
 }
 
-hr.borderbottom {
+/* hr.borderbottom {
   border-top: 1px solid #494b54;
 list-style: none;
   width: 30%;
   height: 90%;
   overflow: auto;
   border: 10px red;
-}
+} */
 .imgMarket { 
   width: 70%;
   border-radius: 5%;
@@ -214,7 +215,7 @@ list-style: none;
   z-index: 10; 
   background-color: #aaddd2;
   width: 29%;
-  margin-top: -1.80%;
+  margin-top: -1.50%;
 }
 
 .li { 
@@ -239,9 +240,7 @@ list-style: none;
   background: #1CAC83; 
 }
 
-hr.borderbottom{
-  border-top: 0.5px solid rgb(110, 199, 150); 
-}
+
 
 li.borderbottom { 
   line-height: 1.2%; 
@@ -302,8 +301,8 @@ li.borderbottom {
   font-size: 1.2em;
 }
 
-hr.borderbottom {
-  border-top: 1px solid #494b54;
+hr.borderbottom{
+  border-top: 0.5px solid rgb(110, 199, 150); 
 }
 
 h1 {
