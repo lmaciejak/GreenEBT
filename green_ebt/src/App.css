@@ -26,6 +26,18 @@ ul {
 
 }
 
+.about-us {
+  margin: 15px;
+}
+
+.footer-bp {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
 .Photos {
   width: 30%;
   height: 30%;

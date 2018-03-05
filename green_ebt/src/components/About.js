@@ -1,8 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import "../App.css";
-import SlideShow from './SlideShow';
 
+import SlideShow from './SlideShow';
+import Copyright from './Copyright';
 
 
 class AboutPage extends React.Component {
@@ -35,6 +36,8 @@ class AboutPage extends React.Component {
                Phone: 212-345-5678 <br />
                Address: 494 Broadway 36th fl. New York, NY 10003
             </p>
+
+            <Copyright />
         </div>
       );
     }
