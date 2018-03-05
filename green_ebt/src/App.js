@@ -8,6 +8,7 @@ import Map from "./components/Map.js";
 import MapAndBoro from "./components/MapAndBoro.js";
 import Title from "./components/Title";
 
+import Copyright from './components/Copyright';
 import Css from "./App.css"
 
 class App extends Component {
@@ -37,6 +38,7 @@ class App extends Component {
           <Route path="/about" component={About} />
         </Switch>
         <Title />
+        <Copyright />
       </div>
     );
   }
