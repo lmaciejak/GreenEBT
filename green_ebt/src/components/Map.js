@@ -19,7 +19,7 @@ import appleImageredL from "../images/red_apple_large.png";
 
 const defaultOptions = {
   defaultCenter: { lat: 40.7128, lng: -73.9 },
-  defaultZoom: 11
+  defaultZoom: 11.3
 };
 
 class Map extends React.Component {

@@ -4,6 +4,7 @@ import "../App.css";
 import SlideShow from './SlideShow';
 
 
+
 class AboutPage extends React.Component {
   constructor(props) {
     super(props)
@@ -13,10 +14,10 @@ class AboutPage extends React.Component {
       return (
         <div className="about-us">
           <h1 className="About-header">About GreenEBT</h1>
-          <p>Founded in March 2018, GreenEBT seeks to connect EBT recipients with farmers markets 
+          <p id='about-text'>Founded in March 2018, GreenEBT seeks to connect EBT recipients with farmers markets 
             accepting EBT.</p>
 
-          <h1 className="About-header">The Team</h1>
+          <h2 className="About-header">The Team</h2>
           <ul>
             <li>Ivan Mendoza</li>
             <li>Princess Guerrero</li>

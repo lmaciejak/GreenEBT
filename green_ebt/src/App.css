@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Economica');
 
+body{
+  background-color: #D8DDEF;
+  color: #494B54;
+}
 .App {
   text-align: center;
 }
@@ -28,8 +32,8 @@ ul {
 }
 
 #map-container {
-  height: 640px;
-  width: 45%;
+  height: 750px;
+  width: 73%;
   padding: 5px;
   margin: 5px;
   /* margin-left: 50%;  */
@@ -89,17 +93,22 @@ ul {
   color: white;
   padding: 15px;
   list-style: none; 
+  width: 10%;
+  height: 10%;
+}
+#logo-size{
+  
 }
 
 
  
   
-  .burger { display: block; list-style-type: none; background: #000; }
+  .burger { display: block; list-style-type: none; background: black; }
   .burger ul { text-align: center; }
   .li {  display: inline-block; width: 15%; list-style: none; background: #000; color: #fff; }
   /* .two{float:right} */
   .burger li a {  display: block; padding: 15px; text-decoration: none; color: #fff; transition: 0.8s; }
-  .burger li a:hover { background: #4183c4; color: #fff; }
+  .burger li a:hover { background: #1CAC83; color: #fff; }
   
   .burger label { display: none; }
   #menu-toggle { display: none; }
@@ -114,15 +123,30 @@ ul {
 
 
 .borough{
-  color: rgb(116, 243, 12);
+  color: #494B54;
   position: absolute;
   margin-left: 20px;
   padding-top: 20px;
   word-wrap: break-word;
-
+list-style: none;
   
   width: 25%;
   height: 80%;
-  overflow: auto;  
+  overflow: auto;
   
+  border: 10px red;
+  
+}
+
+hr.borderbottom{
+  border-top: 1px solid #494B54
+}
+
+h1{
+  text-align: center;
+  font-size: 30px;
+}
+
+#about-text{
+  text-align: center;
 }

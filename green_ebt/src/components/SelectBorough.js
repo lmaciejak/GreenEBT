@@ -60,8 +60,8 @@ class SelectBorough extends React.Component {
   getMarketDetail = () => {
     return this.state.markets.map(market => {
       return (
-        <div>
-          <li>
+        <div >
+          <li className='borderbottom'>
             <p> Name: {market.market_name} </p>
             <p> Location: {market.location} </p>
             <p>Operation Season: {market.operation_season} </p>
@@ -69,6 +69,7 @@ class SelectBorough extends React.Component {
             <p><a href={market.market_link}>{market.market_link}</a></p>
             <p>Accepts EBT: {market.snap_status} </p>
             <p>Phone Number: {market.phone} </p>
+            <hr className='borderbottom' />
           </li>
         </div>
       );
@@ -87,6 +88,7 @@ class SelectBorough extends React.Component {
           <p>Link: www.grownyc.org/greenmarket</p>
           <p>Accepts EBT: "Y"</p>
           <p>Phone Number: (212) 788-7900</p>
+        
           </li>
         </div>
     )
@@ -105,12 +107,15 @@ class SelectBorough extends React.Component {
               disabled={index === 0}
               selected={index === 0}
               value={borough.value}
+
             >
               {borough.name}
             </option>
           ))}
         </select>
         <div>{this.getMarketDetail()}</div>
+        <h2>Welcome to GreenEBT</h2>
+        <p>Please Select a Borough</p>
         </div>
       </div>
     );
