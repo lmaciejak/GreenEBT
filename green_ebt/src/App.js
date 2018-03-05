@@ -11,6 +11,8 @@ import Title from "./components/Title";
 
 import Copyright from './components/Copyright';
 import "./App.css"
+import logo from "./images/greenebt_Trans.png";
+
 
 class App extends Component {
 
@@ -92,7 +94,7 @@ class App extends Component {
         <input type="checkbox" id="menu-toggle" />
   
           <ul className='nav'>
-          <li className='logo' >GreenEBT</li>
+         <div className='logo-div'> <li className='logo' ><img id='logo-size' src={logo} />GreenEBT</li> </div>
           <li className='li'><Link id='link' to="/">Map</Link></li> 
           {"  "}
           <li className='li'><Link id='link' to="/about">About Us</Link></li>

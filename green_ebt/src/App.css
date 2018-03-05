@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Economica');
 
+@import url('https://fonts.googleapis.com/css?family=Bigshot+One');
 body{
   background-color: #D8DDEF;
   color: #494B54;
@@ -81,48 +82,26 @@ ul {
   to { transform: rotate(360deg); }
 }
 
-/* .nav-list {
-  list-style-type: none;
-  margin: 0px;
-  padding: 0;
-  overflow: hidden;
-  background-color: black;
-  font-family: 'Trade Winds', cursive;
-  
-}
-
-.li {
-  float: right;
-  display: block;
-  padding: 20px;
-  border-right: 1px solid #bbb;
-  font-family: 'Trade Winds', cursive;
-}
-#link{
-  color: white;
-  
-}
-.li:hover{
-  background-color: rgb(177, 132, 74);
-}
-/* .logo{
-  float: left;
-  color: white;
-} */
 
 .logo{
   float: left;
-  color: white;
+  color: #1CAC83;
   padding: 15px;
   list-style: none; 
   width: 10%;
-  height: 10%;
-}
-#logo-size{
+  height: 15%;
+  font-family: 'Bigshot One', cursive;
+  font-size: 150%;
   
 }
+#logo-size{
+  height: 12%;
+  width: 10%;
+}
 
-
+.logo-div{
+  display: inline;
+}
  
   
   .burger { display: block; list-style-type: none; background: black; }
@@ -135,12 +114,13 @@ ul {
   .burger label { display: none; }
   #menu-toggle { display: none; }
   
-  @media all and (max-width: 700px) and (min-width: 0px) {
+  @media all and (max-width: 1300px) and (min-width: 0px) {
   .burger label { display: block; height: 70px; width: 70px; line-height: 70px; text-align: center; color: #fff; font-size: 1.8rem; background: #000; cursor: pointer; }
   
   .burger li { width: 100%; }
    .nav { display: block; }
   /* .burger :active .nav { display: none;  } */
+  .logo-div {width: 100%;  }
   }
 
 
