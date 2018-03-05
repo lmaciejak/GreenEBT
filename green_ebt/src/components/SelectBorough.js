@@ -79,6 +79,7 @@ class SelectBorough extends React.Component {
   }
 
   render() {
+    console.log('hello')
     
     return (
       <div>
