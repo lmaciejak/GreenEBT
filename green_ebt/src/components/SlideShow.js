@@ -7,12 +7,14 @@ import Ivan from '../images/Ivan_Mendoza.jpg';
 import Omari from '../images/Omari_Rose.jpg';
 import Shanda from '../images/Le_Shanda_Miller.jpg';
 import Princess from '../images/Princess.jpg';
+import Luiza from '../images/Luiza.jpg'
 
 const images = [
   Ivan,
   Omari,
   Shanda,
-  Princess
+  Princess,
+  Luiza
 ];
 
 const SlideShow = () => {

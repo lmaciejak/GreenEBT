@@ -1,8 +1,10 @@
 @import url("https://fonts.googleapis.com/css?family=Economica");
+@import url('https://fonts.googleapis.com/css?family=Bigshot+One');
 
-body {
-  background-color: #d8ddef;
-  color: #494b54;
+body{
+  background-color: #D8DDEF;
+  color: #494B54;
+  background-color: #aaddd2;
 }
 .App {
   text-align: center;
@@ -27,6 +29,16 @@ ul {
 
 .about-us {
   margin: 15px;
+  align-content: center;
+  text-align: center;
+  text-justify: inter-word;
+}
+
+.gallery {
+  align-content: center;
+  margin: 0 auto;
+  margin-left: 45%;
+  width: 250px;
 }
 
 .footer-bp {
@@ -38,15 +50,16 @@ ul {
 }
 
 .Photos {
-  width: 30%;
-  height: 30%;
+  width: 50%;
+  height: 50%;
 }
 
 #map-container {
   height: 750px;
-  width: 73%;
+  width: 68%;
   padding: 5px;
   margin: 5px;
+  margin-top: -0.6%; 
   /* margin-left: 50%;  */
   float: right;
   /* position: absolute; */
@@ -64,54 +77,57 @@ ul {
   font-family: "Economica", sans-serif;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#legend {
+  position: sticky;
+  width: 60px;
+  font-family: Arial, sans-serif;
+  background: #fff;
+  padding: 5px;
+  margin: 5px;
+  border: 2px solid #000;
+  z-index: 150;
 }
-
-/* .nav-list {
-  list-style-type: none;
-  margin: 0px;
-  padding: 0;
-  overflow: hidden;
-  background-color: black;
-  font-family: 'Trade Winds', cursive;
-  
+#legend h3 {
+  margin-top: 0;
 }
-
-.li {
-  float: right;
-  display: block;
-  padding: 20px;
-  border-right: 1px solid #bbb;
-  font-family: 'Trade Winds', cursive;
+#legend img {
+  vertical-align: middle;
 }
-#link{
-  color: white;
-  
-}
-.li:hover{
-  background-color: rgb(177, 132, 74);
-}
-/* .logo{
-  float: left;
-  color: white;
-} */
-
 .logo {
   float: left;
-  color: white;
+  color: #1CAC83;
   padding: 15px;
   list-style: none;
   width: 10%;
+
   height: 10%;
 }
-#logo-size {
+#logo-size{
+  height: 12%;
+  width: 10%;
 }
+
+.logo-div{
+  display: inline;
+}
+  
+  .burger { display: block; list-style-type: none; background: #000; }
+  .burger ul { text-align: center; }
+  .li {  display: inline-block; width: 15%; list-style: none; background: #000; color: #fff;}
+  /* .two{float:right} */
+  .burger li a {  display: block; padding: 15px; text-decoration: none; color: #fff; transition: 0.8s; }
+  .burger li a:hover { background: #1CAC83; color: #fff; }
+  
+  .burger label { display: none; }
+  #menu-toggle { display: none; }
+  
+  @media all and (max-width: 1300px) and (min-width: 0px) {
+  .burger label { display: block; height: 70px; width: 70px; line-height: 70px; text-align: center; color: #fff; font-size: 1.8rem; background: #000; cursor: pointer; }
+  
+  .burger li { width: 100%; }
+   .nav { display: block; }
+  /* .burger :active .nav { display: none;  } */
+  .logo-div {width: 100%;  }
 
 .burger {
   display: block;
@@ -147,20 +163,6 @@ ul {
 #menu-toggle {
   display: none;
 }
-
-@media all and (max-width: 700px) and (min-width: 0px) {
-  .burger label {
-    display: block;
-    height: 70px;
-    width: 70px;
-    line-height: 70px;
-    text-align: center;
-    color: #fff;
-    font-size: 1.8rem;
-    background: #000;
-    cursor: pointer;
-  }
-
   .burger li {
     width: 100%;
   }
@@ -169,7 +171,6 @@ ul {
   }
   /* .burger :active .nav { display: none;  } */
 }
-
 .borough {
   color: #494b54;
   position: absolute;
@@ -177,17 +178,128 @@ ul {
   padding-top: 20px;
   word-wrap: break-word;
   list-style: none;
-
   width: 25%;
   height: 80%;
   overflow: auto;
-
   border: 10px red;
 }
 
 .marketdetail {
   padding-top: 25%;
 }
+
+hr.borderbottom {
+  border-top: 1px solid #494b54;
+list-style: none;
+  width: 30%;
+  height: 90%;
+  overflow: auto;
+  border: 10px red;
+}
+.imgMarket { 
+  width: 70%;
+  border-radius: 5%;
+}
+
+.marketDescription { 
+  margin-top: 70%; 
+}
+
+.cornImage { 
+  width: 7%;
+}
+
+.staticTitle { 
+  position: fixed;
+  z-index: 10; 
+  background-color: #aaddd2;
+  width: 29%;
+  margin-top: -1.80%;
+}
+
+.li { 
+  border-left: 1px solid green; 
+  width: 48%; 
+  padding-left: 0;
+}
+
+.liContainer { 
+  margin-left: 27.8%;
+}
+
+.borough::-webkit-scrollbar {
+  width: 10px;
+}
+
+.borough::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+
+.borough::-webkit-scrollbar-thumb {
+  background: #1CAC83; 
+}
+
+hr.borderbottom{
+  border-top: 0.5px solid rgb(110, 199, 150); 
+}
+
+li.borderbottom { 
+  line-height: 1.2%; 
+  font-size: 0.8em; 
+}
+
+.link { 
+  text-decoration: none;
+}
+
+.select-style {
+  padding: 0;
+  margin: 0;
+  border: 1px solid #ccc;
+  width: 120px;
+  border-radius: 3px;
+  overflow: hidden;
+  background-color: #fff;
+  background: #fff;
+  position: relative;
+}
+
+.select-style:after {
+  top: 50%;
+  left: 85%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: rgba(0, 0, 0, 0);
+  border-top-color: #000000;
+  border-width: 5px;
+  margin-top: -2px;
+  z-index: 100;
+}
+
+.select-style select {
+  padding: 5px 8px;
+  width: 130%;
+  border: none;
+  box-shadow: none;
+  background-color: transparent;
+  background-image: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+.select-style select:focus {
+  outline: none;
+}
+
+.marketTitle { 
+  color: black;
+  font-weight: bold;
+  font-size: 1.2em;
 
 hr.borderbottom {
   border-top: 1px solid #494b54;
