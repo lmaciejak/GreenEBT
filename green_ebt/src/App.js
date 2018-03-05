@@ -8,7 +8,6 @@ import Map from "./components/Map.js";
 import MapAndBoro from "./components/MapAndBoro.js";
 import Title from "./components/Title";
 
-import Css from "./App.css"
 
 class App extends Component {
   render() {
