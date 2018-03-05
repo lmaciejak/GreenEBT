@@ -16,6 +16,7 @@ import appleImageredS from "../images/red_apple_small.png";
 import appleImageredM from "../images/red_apple_medium.png";
 import appleImageredL from "../images/red_apple_large.png";
 
+import Legend from "./Legend";
 
 class Map extends Component {
   constructor(props) {
@@ -88,7 +89,7 @@ zoom >= 18 ? appleImageredL : zoom >= 17 ? appleImageredM: appleImageredS;
 
     // console.log('this.state.markets[0].location_points', this.state.markets[0].location_points.coordinates)
 
-    return <GoogleMapReact id="map-container" bootstrapURLKeys={{ key: "AIzaSyCQTUR2rqPrkIsOIBh7G_KjKE74P4kcKX0" }}  {...this.props.mapOptions}>
+    return <GoogleMapReact id="map-container" bootstrapURLKeys={{ key: "AIzaSyCQTUR2rqPrkIsOIBh7G_KjKE74P4kcKX0" }} {...this.props.mapOptions}>
         {markets.map((market, i) => (market.snap_status === "Y" ? <div lat={market.location_points.coordinates[1]} lng={market.location_points.coordinates[0]} style={{ width: 30, heigth: 30 }}>
                 <MarketMarkerGreen id="market-marker" market={market} imageGreen={imageGreen} selected={market[i] === selectedMarketIndex} onMarketClick={() => this.onMarketClick(i)} key={i} lat={market.location_points.coordinates[1]} lng={market.location_points.coordinates[0]} />
                 {i === selectedMarketIndex && <div id="market-info">
@@ -101,6 +102,7 @@ zoom >= 18 ? appleImageredL : zoom >= 17 ? appleImageredM: appleImageredS;
                     {MarketInfo(markets[selectedMarketIndex])}
                   </div>}
               </div>))}
+        <Legend />
       </GoogleMapReact>;
   }
 }

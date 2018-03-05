@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Economica');
+@import url("https://fonts.googleapis.com/css?family=Economica");
+@import url('https://fonts.googleapis.com/css?family=Bigshot+One');
 
 body{
   background-color: #D8DDEF;
@@ -24,11 +25,20 @@ body{
 ul {
   list-style-type: none;
   margin: 0 auto 6px 5px;
-
 }
 
 .about-us {
   margin: 15px;
+  align-content: center;
+  text-align: center;
+  text-justify: inter-word;
+}
+
+.gallery {
+  align-content: center;
+  margin: 0 auto;
+  margin-left: 45%;
+  width: 250px;
 }
 
 .footer-bp {
@@ -40,8 +50,8 @@ ul {
 }
 
 .Photos {
-  width: 30%;
-  height: 30%;
+  width: 50%;
+  height: 50%;
 }
 
 #map-container {
@@ -53,7 +63,6 @@ ul {
   /* margin-left: 50%;  */
   float: right;
   /* position: absolute; */
- 
 }
 
 .App-title {
@@ -65,56 +74,55 @@ ul {
 }
 
 .About-header {
-  font-family: 'Economica', sans-serif;
+  font-family: "Economica", sans-serif;
+}
+#legend {
+  position: sticky;
+  width: 60px;
+  font-family: Arial, sans-serif;
+  background: #fff;
+  padding: 5px;
+  margin: 5px;
+  border: 2px solid #000;
+  z-index: 150;
+}
+#legend h3 {
+  margin-top: 0;
+}
+#legend img {
+  vertical-align: middle;
 }
 
 @keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
-/* .nav-list {
-  list-style-type: none;
-  margin: 0px;
-  padding: 0;
-  overflow: hidden;
-  background-color: black;
-  font-family: 'Trade Winds', cursive;
-  
-}
 
-.li {
-  float: right;
-  display: block;
-  padding: 20px;
-  border-right: 1px solid #bbb;
-  font-family: 'Trade Winds', cursive;
-}
-#link{
-  color: white;
-  
-}
-.li:hover{
-  background-color: rgb(177, 132, 74);
-}
-/* .logo{
+.logo {
   float: left;
-  color: white;
-} */
-
-.logo{
-  float: left;
-  color: white;
+  color: #1CAC83;
   padding: 15px;
-  list-style: none; 
+  list-style: none;
   width: 10%;
-  height: 10%;
-}
-#logo-size{
+  height: 15%;
+  font-family: 'Bigshot One', cursive;
+  font-size: 150%;
   
 }
 
+#logo-size{
+  height: 12%;
+  width: 10%;
+}
 
+.logo-div{
+  display: inline;
+}
  
   
   .burger { display: block; list-style-type: none; background: #000; }
@@ -127,32 +135,71 @@ ul {
   .burger label { display: none; }
   #menu-toggle { display: none; }
   
-  @media all and (max-width: 700px) and (min-width: 0px) {
+  @media all and (max-width: 1300px) and (min-width: 0px) {
   .burger label { display: block; height: 70px; width: 70px; line-height: 70px; text-align: center; color: #fff; font-size: 1.8rem; background: #000; cursor: pointer; }
   
   .burger li { width: 100%; }
    .nav { display: block; }
   /* .burger :active .nav { display: none;  } */
+  .logo-div {width: 100%;  }
+
+.burger {
+  display: block;
+  list-style-type: none;
+  background: black;
+}
+.burger ul {
+  text-align: center;
+}
+.li {
+  display: inline-block;
+  width: 15%;
+  list-style: none;
+  background: #000;
+  color: #fff;
+}
+/* .two{float:right} */
+.burger li a {
+  display: block;
+  padding: 15px;
+  text-decoration: none;
+  color: #fff;
+  transition: 0.8s;
+}
+.burger li a:hover {
+  background: #1cac83;
+  color: #fff;
+}
+
+.burger label {
+  display: none;
+}
+#menu-toggle {
+  display: none;
+}
+
+
+  .burger li {
+    width: 100%;
   }
+  .nav {
+    display: block;
+  }
+  /* .burger :active .nav { display: none;  } */
+}
 
-
-.borough{
-  color: #494B54;
+.borough {
+  color: #494b54;
   position: absolute;
   margin-left: 20px;
   padding-top: 20px;
   word-wrap: break-word;
 list-style: none;
-
-  
   width: 30%;
   height: 90%;
   overflow: auto;
-  
   border: 10px red;
-  
 }
-
 .imgMarket { 
   width: 70%;
   border-radius: 5%;
@@ -257,13 +304,17 @@ li.borderbottom {
   color: black;
   font-weight: bold;
   font-size: 1.2em;
+
+hr.borderbottom {
+  border-top: 1px solid #494b54;
+
 }
 
-h1{
+h1 {
   text-align: center;
   font-size: 30px;
 }
 
-#about-text{
+#about-text {
   text-align: center;
 }

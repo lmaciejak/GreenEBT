@@ -10,7 +10,9 @@ import MapAndBoro from "./components/MapAndBoro.js";
 import Title from "./components/Title";
 
 import Copyright from './components/Copyright';
-import "./App.css"
+
+import logo from "./images/greenebt_Trans.png";
+
 
 class App extends Component {
 
@@ -92,7 +94,8 @@ class App extends Component {
         <input type="checkbox" id="menu-toggle" />
   
           <ul className='nav'>
-          <li className='logo' >GreenEBT</li>
+
+           <div className='logo-div'> <li className='logo' ><img id='logo-size' src={logo} />GreenEBT</li> </div>
           <div className="liContainer">
           <li className='li'><Link id='link' to="/">MAP</Link></li> 
           {"  "}
@@ -100,9 +103,6 @@ class App extends Component {
           </div>
           </ul>
         </div>
-
-    
-
 
         <Switch>
           <Route exact path="/" render={() => {
