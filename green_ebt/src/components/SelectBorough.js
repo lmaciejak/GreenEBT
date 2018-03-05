@@ -44,7 +44,7 @@ class SelectBorough extends React.Component {
     return this.props.markets.map(market => {
       return (
 
-        <div >
+        <div className='gridbox'>
           <li className='borderbottom'>
           <img className="cornImage"src="http://res.freestockphotos.biz/pictures/17/17207-illustration-of-an-ear-of-corn-pv.png"/>
             <p className="marketTitle"> {market.market_name} </p>
@@ -70,7 +70,6 @@ class SelectBorough extends React.Component {
         <h2>Welcome to GreenEBT</h2>
         <img className="imgMarket" src="https://cdn.pixabay.com/photo/2016/07/28/08/58/market-1547290_1280.jpg" />
         <p>Please Select a Borough</p>
-        
         <div class="select-style">
         <select value={this.props.selectedBorough} onChange={this.props.handleSelect}>
           {this.state.boroughs.map((borough, index) => (
@@ -85,11 +84,12 @@ class SelectBorough extends React.Component {
           ))}
         </select>
         </div>
-        </div>
+
+        <h2>Welcome to GreenEBT</h2>
+        <p>Please Select a Borough</p>
+
         <br /> 
         <div className="marketDescription">{this.getMarketDetail()}</div>
-        
-        </div>
       </div>
     );
   }
