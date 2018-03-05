@@ -92,16 +92,13 @@ class App extends Component {
       <div>
         
         <div className='burger'>
-        <label id="menu-toggle"> ☰ </label>
         <input type="checkbox" id="menu-toggle" />
   
           <ul className='nav'>
           <li className='logo' >GreenEBT</li>
-          <div className='two'>
           <li className='li'><Link id='link' to="/">Map</Link></li> 
           {"  "}
           <li className='li'><Link id='link' to="/about">About Us</Link></li>
-          </div>
           </ul>
         </div>
 

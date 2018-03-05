@@ -19,8 +19,9 @@ class MapAndBoro extends React.Component {
   render() {
     return (
       <div>
-        
+   
         <SelectBorough handleSelect={this.props.handleSelect} mapOptions={this.props.mapOptions} markets={this.props.markets} />
+
         <div id="map-container">
           <Map onMarketClick={this.onMarketClick} markets={this.props.markets} mapOptions={this.props.mapOptions} />
         </div>

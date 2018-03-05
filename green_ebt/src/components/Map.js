@@ -16,6 +16,7 @@ import appleImageredS from "../images/red_apple_small.png";
 import appleImageredM from "../images/red_apple_medium.png";
 import appleImageredL from "../images/red_apple_large.png";
 
+
 class Map extends Component {
   constructor(props) {
     super(props);
