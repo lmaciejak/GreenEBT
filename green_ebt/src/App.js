@@ -37,35 +37,35 @@ class App extends Component {
       this.setState({
         selectedBorough: targetVal, 
         mapOptions: {center: { lat: 40.57953, lng: -74.15020 },
-        zoom: 12
+        zoom: 14
       }});
     }
       else if (targetVal === 'Queens'){ 
         this.setState({
           selectedBorough: targetVal, 
           mapOptions: {  center: { lat: 40.68149, lng: -73.83652 },
-          zoom: 11.6
+          zoom: 14
         }});
       } 
       else if (targetVal === 'New York'){ 
         this.setState({
           selectedBorough: targetVal, 
-          mapOptions: {    center: { lat: 40.77306, lng: -73.97125 },
-          zoom: 12
+          mapOptions: {    center: { lat: 40.77306, lng: -73.97145 },
+          zoom: 14
         }});
       } 
       else if (targetVal === 'Bronx'){ 
         this.setState({
           selectedBorough: targetVal, 
           mapOptions:  { center: { lat: 40.84985, lng: -73.86641 },
-          zoom: 5
+          zoom: 14
         }});
       } 
       else if (targetVal === 'Kings'){ 
         this.setState({
           selectedBorough: targetVal, 
           mapOptions:  { center: {lat: 40.6482, lng: -73.9442 },
-            zoom: 12
+            zoom: 14
         }});
       } 
 
@@ -93,9 +93,11 @@ class App extends Component {
   
           <ul className='nav'>
           <li className='logo' >GreenEBT</li>
-          <li className='li'><Link id='link' to="/">Map</Link></li> 
+          <div className="liContainer">
+          <li className='li'><Link id='link' to="/">MAP</Link></li> 
           {"  "}
-          <li className='li'><Link id='link' to="/about">About Us</Link></li>
+          <li className='li'><Link id='link' to="/about">ABOUT </Link></li>
+          </div>
           </ul>
         </div>
 

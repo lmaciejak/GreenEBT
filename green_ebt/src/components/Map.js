@@ -71,7 +71,7 @@ class Map extends Component {
         lat: markets[i].location_points.coordinates[1],
         lng: markets[i].location_points.coordinates[0]
       },
-    zoom: 6}
+    zoom: 12}
     });
   };
 
@@ -80,11 +80,11 @@ class Map extends Component {
     const {mapOptions} = this.props
     const { zoom } = mapOptions;
     const imageGreen =
-      zoom >= 16 ? appleImageL : zoom >= 14 ? appleImageM : appleImageS;
+      zoom >= 18 ? appleImageL : zoom >= 17 ? appleImageM : appleImageS;
 console.log('imggreen', imageGreen)
 
 const imageRed = 
-zoom >= 16 ? appleImageredL : zoom >= 14 ? appleImageredM: appleImageredS;
+zoom >= 18 ? appleImageredL : zoom >= 17 ? appleImageredM: appleImageredS;
 
     // console.log('this.state.markets[0].location_points', this.state.markets[0].location_points.coordinates)
 
