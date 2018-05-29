@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css?family=Economica");
-@import url('https://fonts.googleapis.com/css?family=Bigshot+One');
+@import url("https://fonts.googleapis.com/css?family=Bigshot+One");
 
-body{
-  background-color: #D8DDEF;
-  color: #494B54;
+body {
+  background-color: #d8ddef;
+  color: #494b54;
   background-color: #aaddd2;
 }
 .App {
@@ -55,14 +55,18 @@ ul {
 }
 
 #map-container {
-  height: 880px;
+  height: 90%;
   width: 68%;
   padding: 5px;
   margin: 5px;
-  margin-top: -0.6%; 
+  margin-top: -0.5%;
   /* margin-left: 50%;  */
   float: right;
   /* position: absolute; */
+  z-index: 1000;
+  display: flex;
+  position: fixed;
+  margin-left: 31.5%;
 }
 
 .App-title {
@@ -95,44 +99,27 @@ ul {
 }
 .logo {
   float: left;
-  color: #1CAC83;
+  color: #1cac83;
   padding: 15px;
   list-style: none;
   width: 10%;
 
   height: 10%;
 }
-#logo-size{
+#logo-size {
   height: 12%;
   width: 10%;
 }
 
-.logo-div{
+.logo-div {
   display: inline;
 }
-  
-  .burger { display: block; list-style-type: none; background: #000; }
-  .burger ul { text-align: center; }
-  .li {  display: inline-block; width: 15%; list-style: none; background: #000; color: #fff;}
-  /* .two{float:right} */
-  .burger li a {  display: block; padding: 15px; text-decoration: none; color: #fff; transition: 0.8s; }
-  .burger li a:hover { background: #1CAC83; color: #fff; }
-  
-  .burger label { display: none; }
-  #menu-toggle { display: none; }
-  
-  @media all and (max-width: 1300px) and (min-width: 0px) {
-  .burger label { display: block; height: 70px; width: 70px; line-height: 70px; text-align: center; color: #fff; font-size: 1.8rem; background: #000; cursor: pointer; }
-  
-  .burger li { width: 100%; }
-   .nav { display: block; }
-  /* .burger :active .nav { display: none;  } */
-  .logo-div {width: 100%;  }
 
 .burger {
   display: block;
   list-style-type: none;
-  background: black;
+  background: #000;
+  margin-top: -10px;
 }
 .burger ul {
   text-align: center;
@@ -163,6 +150,75 @@ ul {
 #menu-toggle {
   display: none;
 }
+
+@media all and (max-width: 1300px) and (min-width: 0px) {
+  .burger label {
+    display: block;
+    height: 10px;
+    width: 70px;
+    line-height: 10px;
+    text-align: center;
+    color: #fff;
+    font-size: 1.8rem;
+    background: #000;
+    cursor: pointer;
+  }
+
+  .liContainer {
+    display: none;
+  }
+
+  #logo-size {
+    height: 40px;
+    width: 40px;
+  }
+
+  .burger li {
+    width: 100%;
+  }
+  .nav {
+    display: block;
+  }
+  /* .burger :active .nav { display: none;  } */
+  .logo-div {
+    width: 100%;
+  }
+
+  .burger {
+    display: block;
+    list-style-type: none;
+    background: black;
+    height: 100px;
+  }
+  .burger ul {
+    text-align: center;
+  }
+  .li {
+    display: inline-block;
+    width: 15%;
+    list-style: none;
+    background: #000;
+    color: #fff;
+  }
+  /* .two{float:right} */
+  .burger li a {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    color: #fff;
+    transition: 0.8s;
+  }
+  .burger li a:hover {
+    background: #1cac83;
+    color: #fff;
+  }
+
+  .burger label {
+    display: none;
+  }
+  #menu-toggle {
+    display: none;
+  }
   .burger li {
     width: 100%;
   }
@@ -197,34 +253,34 @@ list-style: none;
   overflow: auto;
   border: 10px red;
 } */
-.imgMarket { 
+.imgMarket {
   width: 70%;
   border-radius: 5%;
 }
 
-.marketDescription { 
-  margin-top: 70%; 
+.marketDescription {
+  margin-top: 70%;
 }
 
-.cornImage { 
+.cornImage {
   width: 7%;
 }
 
-.staticTitle { 
+.staticTitle {
   position: fixed;
-  z-index: 10; 
+  z-index: 10;
   background-color: #aaddd2;
   width: 29%;
-  margin-top: -1.50%;
+  margin-top: -1.5%;
 }
 
-.li { 
-  border-left: 1px solid green; 
-  width: 48%; 
+.li {
+  border-left: 1px solid green;
+  width: 48%;
   padding-left: 0;
 }
 
-.liContainer { 
+.liContainer {
   margin-left: 27.8%;
 }
 
@@ -233,21 +289,19 @@ list-style: none;
 }
 
 .borough::-webkit-scrollbar-track {
-  background: #f1f1f1; 
+  background: #f1f1f1;
 }
 
 .borough::-webkit-scrollbar-thumb {
-  background: #1CAC83; 
+  background: #1cac83;
 }
 
-
-
-li.borderbottom { 
-  line-height: 1.2%; 
-  font-size: 0.8em; 
+li.borderbottom {
+  line-height: 1.2%;
+  font-size: 0.8em;
 }
 
-.link { 
+.link {
   text-decoration: none;
 }
 
@@ -287,22 +341,22 @@ li.borderbottom {
   background-color: transparent;
   background-image: none;
   -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
 .select-style select:focus {
   outline: none;
 }
 
-.marketTitle { 
+.marketTitle {
   color: black;
   font-weight: bold;
   font-size: 1.2em;
 }
 
-hr.borderbottom{
-  border-top: 0.5px solid rgb(110, 199, 150); 
+hr.borderbottom {
+  border-top: 0.5px solid rgb(110, 199, 150);
 }
 
 h1 {
